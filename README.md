@@ -1,39 +1,42 @@
 
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=34&pause=3000&center=true&vCenter=true&width=600&lines=Mohamed+Ashfaq" />
-
-building products > collecting certificates
+# Mohamed Ashfaq
 
 Full Stack Developer • Cybersecurity Engineering Student
+
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=18&pause=2500&center=true&vCenter=true&width=700&lines=Building+production-ready+software;Turning+ideas+into+products;Interested+in+SaaS%2C+System+Design+and+Security" />
 
 </div>
 
 ---
 
-### about
+### About
 
-building software for businesses, startups, and real-world operations.
+Building software for businesses, startups, and real-world operations.
+
+Focused on creating practical products that solve real problems, with an interest in scalable systems, SaaS platforms, and cybersecurity.
 
 ---
 
-### stack
+### Tech
 
 <p>
-  <img src="https://skillicons.dev/icons?i=react,ts,nextjs,flutter,nodejs,php,postgres,mysql,supabase,tailwind,git,github" />
+  <img src="https://skillicons.dev/icons?i=react,ts,nextjs,flutter,nodejs,php,postgres,mysql,supabase,tailwind,git,github,vscode" />
 </p>
 
 ---
 
-### now
+### Currently
 
 
-shipping products
-learning system design
-exploring cybersecurity
-
+→ shipping products
+→ learning system design
+→ exploring cybersecurity
 
 ---
+
+### GitHub
 
 <img src="https://github-readme-stats.vercel.app/api?username=mdashfaqq&show_icons=true&hide_border=true&theme=transparent" />
 
@@ -41,7 +44,6 @@ exploring cybersecurity
 
 <div align="center">
 
-ship → learn → improve
+building software that people actually use.
 
 </div>
-
