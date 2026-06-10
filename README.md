@@ -1,65 +1,60 @@
 
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=Inter&weight=600&size=34&pause=2500&center=true&vCenter=true&width=500&lines=Mohamed+Ashfaq" />
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=36&pause=2500&center=true&vCenter=true&width=700&lines=Mohamed+Ashfaq" />
 
-<br/>
+
+building products > collecting certificates
+
 
 Full Stack Developer • Cybersecurity Engineering Student
 
 </div>
 
----
+<br>
 
-### About
+### /about
 
-Building production-ready software focused on business operations, SaaS platforms, and mobile applications.
+Building software for businesses, startups, and real-world operations.
 
----
+Currently interested in:
 
-### Selected Projects
 
-🏆 AwardX — Awards Management Platform
+saas
+system design
+cybersecurity
+product engineering
 
-🍽️ CoreDine — Restaurant POS & Kitchen Operations
 
-🏢 Rental Utility POS — Business Management Platform
+<br>
 
-🛏️ Bismi Furniture — Production eCommerce Store
+### /stack
 
-👔 UnReadymades — Garment eCommerce Platform
-
-🔒 OfflineDocs — Privacy-First Document Vault
-
----
-
-### Stack
-
-<p>
-  <img src="https://skillicons.dev/icons?i=react,ts,nextjs,flutter,nodejs,php,postgres,mysql,supabase,tailwind,git,github" />
+<p align="left">
+  <img src="https://skillicons.dev/icons?i=react,ts,nextjs,flutter,nodejs,php,postgres,mysql,supabase,tailwind,git,github,vscode" />
 </p>
 
----
+<br>
 
-### Focus
+### /now
 
-SaaS Development
-System Design
-Cybersecurity
 
----
+→ building production software
+→ learning scalable architectures
+→ turning ideas into products
 
-### GitHub
+
+<br>
+
+### /github
 
 <img src="https://github-readme-stats.vercel.app/api?username=mdashfaqq&show_icons=true&hide_border=true&theme=transparent&rank_icon=github" />
 
----
+<br>
 
-### Connect
+<div align="center">
 
-Portfolio → https://your-portfolio.vercel.app
+#### "Ship. Learn. Improve. Repeat."
 
-LinkedIn → https://linkedin.com/in/your-profile
-
-```
+</div>
 ```
