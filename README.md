@@ -1,32 +1,39 @@
+
 <div align="center">
 
-# Mohamed Ashfaq
-
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=rect&height=3&color=gradient" width="100%" />
-</p>
+<img src="https://readme-typing-svg.demolab.com?font=Inter&weight=600&size=34&pause=2500&center=true&vCenter=true&width=500&lines=Mohamed+Ashfaq" />
 
 <br/>
 
-Cybersecurity Engineering Student
+Full Stack Developer • Cybersecurity Engineering Student
 
 </div>
 
 ---
 
-### Currently Building
+### About
 
-🏆 **AwardX** — Awards Management Platform
-
-🍽️ **CoreDine** — Restaurant POS & Kitchen Operations
-
-🏢 **Rental Utility POS** — Business Management Platform
-
-🔒 **OfflineDocs** — Privacy-First Document Vault
+Building production-ready software focused on business operations, SaaS platforms, and mobile applications.
 
 ---
 
-### Tech
+### Selected Projects
+
+🏆 AwardX — Awards Management Platform
+
+🍽️ CoreDine — Restaurant POS & Kitchen Operations
+
+🏢 Rental Utility POS — Business Management Platform
+
+🛏️ Bismi Furniture — Production eCommerce Store
+
+👔 UnReadymades — Garment eCommerce Platform
+
+🔒 OfflineDocs — Privacy-First Document Vault
+
+---
+
+### Stack
 
 <p>
   <img src="https://skillicons.dev/icons?i=react,ts,nextjs,flutter,nodejs,php,postgres,mysql,supabase,tailwind,git,github" />
@@ -36,10 +43,10 @@ Cybersecurity Engineering Student
 
 ### Focus
 
+SaaS Development
+System Design
+Cybersecurity
 
-Building   → SaaS Products
-Learning   → System Design
-Interest   → Security & Scalable Systems
 ---
 
 ### GitHub
@@ -50,7 +57,9 @@ Interest   → Security & Scalable Systems
 
 ### Connect
 
-Portfolio → your-portfolio.vercel.app
+Portfolio → https://your-portfolio.vercel.app
 
-LinkedIn → linkedin.com/in/your-profile
+LinkedIn → https://linkedin.com/in/your-profile
 
+```
+```
