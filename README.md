@@ -30,6 +30,6 @@ Focused on secure systems, scalable architectures, and products that solve real 
 
 <div align="center">
 
-### BUILDING COOL STUFF
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=16&pause=3000&color=7AA2F7&center=true&vCenter=true&width=300&lines=plotting+something..." />
 
 </div>
