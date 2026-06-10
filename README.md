@@ -27,9 +27,11 @@ Focused on secure systems, scalable architectures, and products that solve real 
 
 ---
 
-<p align="center">
-<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&height=80&section=header&text=plotting%20something...&fontSize=28&fontColor=ffffff&animation=fadeIn" />
-</p>
+<div align="center">
+
+# ✦ stay curious ✦
+
+</div>
 
 ---
 
