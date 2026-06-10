@@ -2,7 +2,9 @@
 
 # Mohamed Ashfaq
 
-<img src="https://readme-typing-svg.demolab.com?font=Inter&weight=500&size=20&pause=1800&center=true&vCenter=true&width=700&lines=Full+Stack+Developer;Building+Production+Ready+Software;Mobile+Apps+•+SaaS+Platforms+•+Business+Systems" />
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=rect&height=3&color=gradient" width="100%" />
+</p>
 
 <br/>
 
