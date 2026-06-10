@@ -40,8 +40,6 @@ Cybersecurity Engineering Student
 Building   → SaaS Products
 Learning   → System Design
 Interest   → Security & Scalable Systems
-
-
 ---
 
 ### GitHub
@@ -52,6 +50,7 @@ Interest   → Security & Scalable Systems
 
 ### Connect
 
-Portfolio → https://mdashfaq-portfolio.vercel.app/
+Portfolio → your-portfolio.vercel.app
 
+LinkedIn → linkedin.com/in/your-profile
 
