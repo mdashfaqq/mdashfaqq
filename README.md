@@ -1,4 +1,3 @@
-````md
 <div align="center">
 
 <img src="https://capsule-render.vercel.app/api?type=waving&height=250&text=Mohamed%20Ashfaq&fontSize=48&fontAlignY=40&animation=twinkling&theme=dark" />
@@ -150,6 +149,3 @@ Email → [your@email.com](mailto:your@email.com)
 </div>
 
 <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:111111,100:333333&height=120&section=footer"/>
-
-```
-```
