@@ -27,23 +27,8 @@ Focused on creating practical products that solve real problems, with an interes
 
 ---
 
-### Currently
-
-
-→ shipping products
-→ learning system design
-→ exploring cybersecurity
-
----
-
-### GitHub
-
-<img src="https://github-readme-stats.vercel.app/api?username=mdashfaqq&show_icons=true&hide_border=true&theme=transparent" />
-
----
-
 <div align="center">
 
-building cool stuff.
+BUILDING COOL STUFFS
 
 </div>
