@@ -22,7 +22,7 @@ Focused on secure systems, scalable architectures, and products that solve real 
 
 <div align="center">
 
-<img src="https://skillicons.dev/icons?i=react,ts,nextjs,flutter,nodejs,php,postgres,mysql,supabase,tailwind,git,github,vscode&perline=7" />
+`plotting something_`
 
 </div>
 
