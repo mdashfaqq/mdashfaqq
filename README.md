@@ -44,6 +44,6 @@ Focused on creating practical products that solve real problems, with an interes
 
 <div align="center">
 
-building software that people actually use.
+building cool stuff.
 
 </div>
