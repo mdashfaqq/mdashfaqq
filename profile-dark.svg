@@ -1,0 +1,369 @@
+<svg width="900" height="511" viewBox="0 0 900 511" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&amp;display=swap');
+      
+      * { font-family: 'JetBrains Mono', monospace; }
+      
+      .prompt { fill: #66FFC2; font-weight: 600; font-size: 13px; }
+      .cmd { fill: #49E8FF; font-weight: 600; font-size: 13px; }
+      .output { fill: #EAF6FF; font-weight: 400; font-size: 13px; }
+      .muted { fill: #6B7A90; font-size: 11px; }
+      .accent-purple { fill: #A855F7; font-weight: 600; font-size: 13px; }
+      .accent-cyan { fill: #49E8FF; font-weight: 600; font-size: 13px; }
+    </style>
+    
+    <pattern id="grid-pattern" width="15" height="15" patternUnits="userSpaceOnUse">
+      <path d="M 15 0 L 0 0 0 15" fill="none" stroke="#00D4FF" stroke-width="1" opacity="0.03"/>
+    </pattern>
+    <pattern id="scanline" width="4" height="4" patternUnits="userSpaceOnUse">
+      <path d="M 0 0 L 4 0" stroke="rgba(0,0,0,0.06)" stroke-width="2"/>
+    </pattern>
+    
+    <linearGradient id="laser-grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="rgba(0, 255, 204, 0)"/>
+      <stop offset="20%" stop-color="rgba(0, 255, 204, 0.3)"/>
+      <stop offset="50%" stop-color="rgba(0, 255, 204, 0.8)"/>
+      <stop offset="80%" stop-color="rgba(0, 255, 204, 0.3)"/>
+      <stop offset="100%" stop-color="rgba(0, 255, 204, 0)"/>
+    </linearGradient>
+
+    <filter id="laser-glow" x="-20%" y="-500%" width="140%" height="1100%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="neon-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="avatar-outer-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="avatar-inner-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Outer Window Background -->
+  <rect x="0" y="0" width="900" height="511" fill="#0f0f10" rx="10" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <rect x="0" y="0" width="900" height="511" fill="url(#scanline)" rx="10" pointer-events="none"/>
+
+  <!-- ==================== STARTUP SEQUENCE ==================== -->
+  <g id="startup-sequence">
+    <animate attributeName="opacity" values="1;0" begin="8.0s" dur="0.5s" fill="freeze" />
+    
+    <!-- Solid Background to hide dashboard underneath -->
+    <rect x="0" y="0" width="900" height="511" fill="#0f0f10" rx="10"/>
+    <rect x="0" y="0" width="900" height="511" fill="url(#scanline)" rx="10" opacity="0.3"/>
+    
+    <!-- Blinking Cursor -->
+    <rect x="40" y="40" width="10" height="18" fill="#49E8FF">
+      <animate attributeName="opacity" values="1;0;1" dur="0.8s" repeatCount="indefinite" />
+    </rect>
+
+    <g transform="translate(40, 52)" font-family="'JetBrains Mono', monospace" font-size="14" fill="#EAF6FF">
+      
+      <!-- Stage 1: Initializing -->
+      <g opacity="0">
+        <animate attributeName="opacity" values="0;1" begin="0.2s" dur="0.1s" fill="freeze"/>
+        <text>Initializing Developer Environment...</text>
+      </g>
+
+      <!-- Stage 2: GitHub Connection -->
+      <g opacity="0" transform="translate(0, 30)">
+        <animate attributeName="opacity" values="0;1" begin="1.0s" dur="0.1s" fill="freeze"/>
+        <text>Connecting to github.com...</text>
+        <rect x="0" y="15" width="200" height="4" fill="#1C293B" rx="2" />
+        <rect x="0" y="15" width="0" height="4" fill="#00FFCC" rx="2">
+          <animate attributeName="width" values="0;200" begin="1.2s" dur="0.4s" fill="freeze" />
+        </rect>
+        <text x="210" y="21" font-size="12" fill="#00FFCC" opacity="0">
+          <animate attributeName="opacity" values="0;1" begin="1.6s" dur="0.1s" fill="freeze"/>
+          ✓ Connection Established
+        </text>
+      </g>
+
+      <!-- Stage 3: Profile Retrieval -->
+      <g opacity="0" transform="translate(0, 75)">
+        <animate attributeName="opacity" values="0;1" begin="1.8s" dur="0.1s" fill="freeze"/>
+        <text>Retrieving public profile...</text>
+        <rect x="0" y="15" width="200" height="4" fill="#1C293B" rx="2" />
+        <rect x="0" y="15" width="0" height="4" fill="#00FFCC" rx="2">
+          <animate attributeName="width" values="0;200" begin="2.0s" dur="0.4s" fill="freeze" />
+        </rect>
+        <text x="210" y="21" font-size="12" fill="#00FFCC" opacity="0">
+          <animate attributeName="opacity" values="0;1" begin="2.4s" dur="0.1s" fill="freeze"/>
+          ✓ Profile Loaded
+        </text>
+      </g>
+
+      <!-- Stage 4: Repository Scan -->
+      <g opacity="0" transform="translate(0, 120)">
+        <animate attributeName="opacity" values="0;1" begin="2.6s" dur="0.1s" fill="freeze"/>
+        <text>Scanning tech stack...</text>
+        
+        <g font-size="12" fill="#EAF6FF">
+          <g opacity="0" transform="translate(0, 20)"><animate attributeName="opacity" values="0;1" begin="2.8s" dur="0.1s" fill="freeze"/><text fill="#00FFCC">✓</text><text x="15">React</text></g>
+          <g opacity="0" transform="translate(80, 20)"><animate attributeName="opacity" values="0;1" begin="2.9s" dur="0.1s" fill="freeze"/><text fill="#00FFCC">✓</text><text x="15">TypeScript</text></g>
+          <g opacity="0" transform="translate(190, 20)"><animate attributeName="opacity" values="0;1" begin="3.0s" dur="0.1s" fill="freeze"/><text fill="#00FFCC">✓</text><text x="15">Flutter</text></g>
+          <g opacity="0" transform="translate(280, 20)"><animate attributeName="opacity" values="0;1" begin="3.1s" dur="0.1s" fill="freeze"/><text fill="#00FFCC">✓</text><text x="15">Node.js</text></g>
+          <g opacity="0" transform="translate(370, 20)"><animate attributeName="opacity" values="0;1" begin="3.2s" dur="0.1s" fill="freeze"/><text fill="#00FFCC">✓</text><text x="15">PostgreSQL</text></g>
+          <g opacity="0" transform="translate(480, 20)"><animate attributeName="opacity" values="0;1" begin="3.3s" dur="0.1s" fill="freeze"/><text fill="#00FFCC">✓</text><text x="15">Docker</text></g>
+        </g>
+      </g>
+
+      <!-- Stage 5: Contribution Analysis -->
+      <g opacity="0" transform="translate(0, 175)">
+        <animate attributeName="opacity" values="0;1" begin="3.5s" dur="0.1s" fill="freeze"/>
+        <text>Analyzing contribution history...</text>
+        <rect x="0" y="15" width="200" height="4" fill="#1C293B" rx="2" />
+        <rect x="0" y="15" width="0" height="4" fill="#00FFCC" rx="2">
+          <animate attributeName="width" values="0;200" begin="3.7s" dur="0.4s" fill="freeze" />
+        </rect>
+        <text x="210" y="21" font-size="12" fill="#00FFCC" opacity="0">
+          <animate attributeName="opacity" values="0;1" begin="4.1s" dur="0.1s" fill="freeze"/>
+          ✓ Activity Verified
+        </text>
+      </g>
+
+      <!-- Stage 6: Identity Scan -->
+      <g opacity="0" transform="translate(0, 240)">
+        <animate attributeName="opacity" values="0;1" begin="4.3s" dur="0.1s" fill="freeze"/>
+        
+        <g transform="translate(20, 20)">
+          <circle cx="20" cy="20" r="18" fill="none" stroke="#49E8FF" stroke-width="2" stroke-dasharray="4 4">
+            <animateTransform attributeName="transform" type="rotate" values="0 20 20; 360 20 20" dur="4s" repeatCount="indefinite"/>
+          </circle>
+          <circle cx="20" cy="20" r="12" fill="none" stroke="#00FFCC" stroke-width="1.5">
+             <animate attributeName="r" values="12;14;12" dur="2s" repeatCount="indefinite"/>
+          </circle>
+          <circle cx="20" cy="20" r="4" fill="#00FFCC" />
+        </g>
+        
+        <g transform="translate(80, 35)">
+          <text font-size="13" fill="#49E8FF">Scanning biometric identity...</text>
+          <rect x="0" y="10" width="150" height="4" fill="#1C293B" rx="2" />
+          <rect x="0" y="10" width="0" height="4" fill="#49E8FF" rx="2">
+            <animate attributeName="width" values="0;150" begin="4.5s" dur="0.8s" fill="freeze" />
+          </rect>
+          
+          <g opacity="0" transform="translate(0, 35)">
+            <animate attributeName="opacity" values="0;1" begin="5.4s" dur="0.1s" fill="freeze"/>
+            <text font-size="14" font-weight="bold" fill="#00FFCC">IDENTITY MATCH CONFIRMED</text>
+            <text y="20" font-size="13" fill="#EAF6FF">User: Mohamed Ashfaq</text>
+            <text y="40" font-size="13" fill="#EAF6FF">Confidence: <tspan fill="#49E8FF">99.98%</tspan></text>
+            <text y="60" font-size="13" fill="#EAF6FF">Status: <tspan fill="#00FFCC">VERIFIED ACCESS</tspan></text>
+          </g>
+        </g>
+      </g>
+      
+      <!-- Stage 7: Access Granted -->
+      <g opacity="0" transform="translate(0, 410)">
+        <animate attributeName="opacity" values="0;1" begin="6.0s" dur="0.1s" fill="freeze"/>
+        <text font-size="16" font-weight="bold" fill="#00FFCC">ACCESS GRANTED</text>
+        <text y="24" fill="#EAF6FF">Launching Developer Workspace...</text>
+      </g>
+
+    </g>
+  </g>
+
+  <!-- ==================== DASHBOARD ==================== -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;1" begin="8.5s" dur="0.5s" fill="freeze"/>
+
+    <!-- Global Top Title Bar -->
+  <path d="M 0 10 Q 0 0 10 0 L 890 0 Q 900 0 900 10 L 900 36 L 0 36 Z" fill="#1a1a1c"/>
+  <line x1="0" y1="36" x2="900" y2="36" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  
+  <!-- Traffic Lights -->
+  <circle cx="19.5" cy="18" r="5.5" fill="#FF5F57"/>
+  <circle cx="36.5" cy="18" r="5.5" fill="#FEBC2E"/>
+  <circle cx="53.5" cy="18" r="5.5" fill="#28C840"/>
+
+  <text x="450" y="22" fill="#505050" font-family="'JetBrains Mono', monospace" font-size="11" text-anchor="middle" letter-spacing="0.4">ashfaqdev ~ % profile.sh --live</text>
+  
+  <g transform="translate(835, 12)">
+    <circle cx="5" cy="5" r="2.5" fill="#22c55e" filter="url(#neon-glow)">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <text x="14" y="9" fill="#22c55e" font-family="'JetBrains Mono', monospace" font-size="10">active</text>
+  </g>
+
+  <!-- Left Panel: MatrixAvatar -->
+  <g transform="translate(0, 36)">
+    <rect width="240" height="475" fill="#0c0c0e"/>
+    <line x1="240" y1="0" x2="240" y2="475" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+    
+    <rect width="240" height="475" fill="url(#grid-pattern)"/>
+    
+    <text x="120" y="22" fill="rgba(0,212,255,0.4)" font-family="'JetBrains Mono', monospace" font-size="9" text-anchor="middle" letter-spacing="1.5">VISUAL.REC</text>
+    <text x="120" y="465" fill="rgba(0,212,255,0.3)" font-family="'JetBrains Mono', monospace" font-size="9" text-anchor="middle" letter-spacing="1">ID: 0x4D41</text>
+    
+    <!-- HUD Target Bracket Corners -->
+    <path d="M 32 35 L 20 35 L 20 47" fill="none" stroke="rgba(0, 212, 255, 0.6)" stroke-width="1.5"/>
+    <path d="M 208 35 L 220 35 L 220 47" fill="none" stroke="rgba(0, 212, 255, 0.6)" stroke-width="1.5"/>
+    <path d="M 32 440 L 20 440 L 20 428" fill="none" stroke="rgba(0, 212, 255, 0.6)" stroke-width="1.5"/>
+    <path d="M 208 440 L 220 440 L 220 428" fill="none" stroke="rgba(0, 212, 255, 0.6)" stroke-width="1.5"/>
+
+    <text x="26" y="57" fill="rgba(0, 212, 255, 0.7)" font-family="'JetBrains Mono', monospace" font-size="8">
+      <animate attributeName="opacity" values="1;0;0;0;0" calcMode="discrete" dur="5s" repeatCount="indefinite"/>
+      SYS.SCAN: OK
+    </text>
+    <text x="26" y="57" fill="rgba(0, 212, 255, 0.7)" font-family="'JetBrains Mono', monospace" font-size="8">
+      <animate attributeName="opacity" values="0;1;0;0;0" calcMode="discrete" dur="5s" repeatCount="indefinite"/>
+      SYS.SCAN: SECURE
+    </text>
+    <text x="26" y="57" fill="rgba(0, 212, 255, 0.7)" font-family="'JetBrains Mono', monospace" font-size="8">
+      <animate attributeName="opacity" values="0;0;1;0;0" calcMode="discrete" dur="5s" repeatCount="indefinite"/>
+      SYS.SCAN: VERIFIED
+    </text>
+    <text x="26" y="57" fill="rgba(0, 212, 255, 0.7)" font-family="'JetBrains Mono', monospace" font-size="8">
+      <animate attributeName="opacity" values="0;0;0;1;0" calcMode="discrete" dur="5s" repeatCount="indefinite"/>
+      SYS.SCAN: SCANNING
+    </text>
+    <text x="26" y="57" fill="rgba(0, 212, 255, 0.7)" font-family="'JetBrains Mono', monospace" font-size="8">
+      <animate attributeName="opacity" values="0;0;0;0;1" calcMode="discrete" dur="5s" repeatCount="indefinite"/>
+      SYS.SCAN: ALPHA_CLR
+    </text>    <text x="214" y="57" fill="rgba(0, 212, 255, 0.7)" font-family="'JetBrains Mono', monospace" font-size="8" text-anchor="end">
+      <animate attributeName="opacity" values="1;0;0;0;0;0;0;0" calcMode="discrete" dur="4s" repeatCount="indefinite"/>
+      SWEEP: 04%
+    </text>
+    <text x="214" y="57" fill="rgba(0, 212, 255, 0.7)" font-family="'JetBrains Mono', monospace" font-size="8" text-anchor="end">
+      <animate attributeName="opacity" values="0;1;0;0;0;0;0;0" calcMode="discrete" dur="4s" repeatCount="indefinite"/>
+      SWEEP: 24%
+    </text>
+    <text x="214" y="57" fill="rgba(0, 212, 255, 0.7)" font-family="'JetBrains Mono', monospace" font-size="8" text-anchor="end">
+      <animate attributeName="opacity" values="0;0;1;0;0;0;0;0" calcMode="discrete" dur="4s" repeatCount="indefinite"/>
+      SWEEP: 68%
+    </text>
+    <text x="214" y="57" fill="rgba(0, 212, 255, 0.7)" font-family="'JetBrains Mono', monospace" font-size="8" text-anchor="end">
+      <animate attributeName="opacity" values="0;0;0;1;0;0;0;0" calcMode="discrete" dur="4s" repeatCount="indefinite"/>
+      SWEEP: 96%
+    </text>
+    <text x="214" y="57" fill="rgba(0, 212, 255, 0.7)" font-family="'JetBrains Mono', monospace" font-size="8" text-anchor="end">
+      <animate attributeName="opacity" values="0;0;0;0;1;0;0;0" calcMode="discrete" dur="4s" repeatCount="indefinite"/>
+      SWEEP: 98%
+    </text>
+    <text x="214" y="57" fill="rgba(0, 212, 255, 0.7)" font-family="'JetBrains Mono', monospace" font-size="8" text-anchor="end">
+      <animate attributeName="opacity" values="0;0;0;0;0;1;0;0" calcMode="discrete" dur="4s" repeatCount="indefinite"/>
+      SWEEP: 72%
+    </text>
+    <text x="214" y="57" fill="rgba(0, 212, 255, 0.7)" font-family="'JetBrains Mono', monospace" font-size="8" text-anchor="end">
+      <animate attributeName="opacity" values="0;0;0;0;0;0;1;0" calcMode="discrete" dur="4s" repeatCount="indefinite"/>
+      SWEEP: 36%
+    </text>
+    <text x="214" y="57" fill="rgba(0, 212, 255, 0.7)" font-family="'JetBrains Mono', monospace" font-size="8" text-anchor="end">
+      <animate attributeName="opacity" values="0;0;0;0;0;0;0;1" calcMode="discrete" dur="4s" repeatCount="indefinite"/>
+      SWEEP: 11%
+    </text>
+
+    <text x="26" y="421" fill="rgba(0, 212, 255, 0.7)" font-family="'JetBrains Mono', monospace" font-size="8">TARGET: M.ASHFAQ</text>
+    <text x="214" y="421" fill="rgba(0, 212, 255, 0.7)" font-family="'JetBrains Mono', monospace" font-size="8" text-anchor="end">MATCH: 99.98%</text>
+
+    <!-- Avatar Vector Paths -->
+    <g transform="translate(5, 5)">
+      <!-- Outer Glow -->
+      <g stroke="#00FFCC" stroke-linecap="round" fill="none" filter="url(#avatar-outer-glow)">
+        <animateTransform attributeName="transform" type="scale" values="1;1.015;1" dur="4s" repeatCount="indefinite" transform-origin="115 227"/>
+        <circle cx="115" cy="140" r="38" stroke-width="8"/>
+        <!-- Torso arc -->
+        <path d="M 43 234 A 85 85 0 0 1 187 234" stroke-width="8"/>
+      </g>
+      
+      <!-- Inner Details -->
+      <g stroke="#00D4FF" stroke-linecap="round" fill="none" filter="url(#avatar-inner-glow)">
+        <animateTransform attributeName="transform" type="scale" values="1;1.015;1" dur="4s" repeatCount="indefinite" transform-origin="115 227"/>
+        <circle cx="115" cy="140" r="28" stroke-width="3"/>
+        <!-- Inner Torso arc -->
+        <path d="M 60 245 A 65 65 0 0 1 170 245" stroke-width="3"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- Right Panel: TerminalInfo -->
+  <g transform="translate(240, 36)">
+    <!-- Content -->
+    <g transform="translate(20, 20)">
+      <!-- L1 -->
+      <g opacity="0">
+        <animate attributeName="opacity" values="0;1" dur="0.1s" begin="8.7s" fill="freeze" />
+        <text y="0"><tspan class="prompt">ashfaq@dev:~$</tspan> <tspan class="cmd">whoami</tspan></text>
+        <text y="20" class="output">Mohamed Ashfaq</text>
+      </g>
+      
+      <!-- L2 -->
+      <g opacity="0" transform="translate(0, 48)">
+        <animate attributeName="opacity" values="0;1" dur="0.1s" begin="8.9s" fill="freeze" />
+        <text y="0"><tspan class="prompt">ashfaq@dev:~$</tspan> <tspan class="cmd">education</tspan></text>
+        <text y="20" class="output">B.Tech Cybersecurity</text>
+      </g>
+      
+      <!-- L3 -->
+      <g opacity="0" transform="translate(0, 96)">
+        <animate attributeName="opacity" values="0;1" dur="0.1s" begin="9.1s" fill="freeze" />
+        <text y="0"><tspan class="prompt">ashfaq@dev:~$</tspan> <tspan class="cmd">focus</tspan></text>
+        <text y="20" class="output">AI • Cybersecurity • SaaS</text>
+      </g>
+      
+      <!-- L4 -->
+      <g opacity="0" transform="translate(0, 144)">
+        <animate attributeName="opacity" values="0;1" dur="0.1s" begin="9.3s" fill="freeze" />
+        <text y="0"><tspan class="prompt">ashfaq@dev:~$</tspan> <tspan class="cmd">skills</tspan></text>
+        <text y="24" class="accent-purple">Frontend</text> <text x="130" y="24" class="output">React • Next.js • Flutter • TypeScript</text>
+        <text y="44" class="accent-purple">Backend</text>  <text x="130" y="44" class="output">Node.js • Express.js • PHP • REST APIs</text>
+        <text y="64" class="accent-purple">Database</text> <text x="130" y="64" class="output">PostgreSQL • MySQL • Supabase</text>
+        <text y="84" class="accent-purple">Cybersecurity</text> <text x="130" y="84" class="output">Linux • JWT • RBAC • Secure APIs</text>
+        <text y="104" class="accent-purple">DevOps</text> <text x="130" y="104" class="output">Docker • Git • GitHub • Vercel • Railway</text>
+      </g>
+
+      <!-- L5 -->
+      <g opacity="0" transform="translate(0, 268)">
+        <animate attributeName="opacity" values="0;1" dur="0.1s" begin="9.5s" fill="freeze" />
+        <text y="0"><tspan class="prompt">ashfaq@dev:~$</tspan> <tspan class="cmd">contact</tspan></text>
+        <text y="24" class="accent-purple">GitHub</text> <text x="130" y="24" class="output">@mdashfaqq</text>
+        <text y="44" class="accent-purple">LinkedIn</text>  <text x="130" y="44" class="output">/in/mohamedashfaq</text>
+        <text y="64" class="accent-purple">Portfolio</text> <text x="130" y="64" class="output">https://mdashfaq-portfolio.vercel.app</text>
+      </g>
+
+      <!-- L6 -->
+      <g opacity="0" transform="translate(0, 352)">
+        <animate attributeName="opacity" values="0;1" dur="0.1s" begin="9.7s" fill="freeze" />
+        <text y="0"><tspan class="prompt">ashfaq@dev:~$</tspan> <tspan class="cmd">status</tspan></text>
+        <text y="20" class="output">● Open for collaboration</text>
+      </g>
+
+      <!-- Bottom Prompt -->
+      <g transform="translate(0, 400)" opacity="0">
+        <animate attributeName="opacity" values="0;1" dur="0.1s" begin="9.9s" fill="freeze" />
+        <text y="0"><tspan class="prompt">ashfaq@dev:~$</tspan></text>
+        <rect x="126" y="-11" width="8" height="14" fill="#49E8FF">
+          <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite" />
+        </rect>
+      </g>
+    </g>
+  </g>
+
+    <!-- Laser Sweep Overlay (animates over entire layout) -->
+    <g pointer-events="none">
+      <animateTransform attributeName="transform" type="translate" values="0 0; 0 511; 0 0" begin="8.5s" dur="8s" repeatCount="indefinite"/>
+      <rect x="0" y="0" width="900" height="2" fill="url(#laser-grad)" filter="url(#laser-glow)" opacity="0.7"/>
+    </g>
+  </g>
+</svg>
