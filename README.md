@@ -1,13 +1,14 @@
 <p align="center">
-  <img
-    src="https://raw.githubusercontent.com/mdashfaqq/mdashfaqq/main/profile-dark.svg#gh-dark-mode-only"
-    alt="Dark Mode"
-    width="100%"
-  />
-
-  <img
-    src="https://raw.githubusercontent.com/mdashfaqq/mdashfaqq/main/profile-light.svg#gh-light-mode-only"
-    alt="Light Mode"
-    width="100%"
-  />
+  <picture>
+    <source
+      media="(prefers-color-scheme: dark)"
+      srcset="https://raw.githubusercontent.com/mdashfaqq/mdashfaqq/main/profile-dark.svg">
+    <source
+      media="(prefers-color-scheme: light)"
+      srcset="https://raw.githubusercontent.com/mdashfaqq/mdashfaqq/main/profile-light.svg">
+    <img
+      src="https://raw.githubusercontent.com/mdashfaqq/mdashfaqq/main/profile-dark.svg"
+      alt="Mohamed Ashfaq"
+      width="100%">
+  </picture>
 </p>
